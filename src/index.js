@@ -10,16 +10,17 @@ import App from './javascripts/App';
 import registerServiceWorker from './registerServiceWorker';
 
 import {Router,Route,IndexRedirect,hashHistory, Redirect} from 'react-router'
+import Home from './javascripts/components/Home'
 
 
 
-// let routes = <Router history={hashHistory}>
-// 	<Route path="/" component={App}>
-// 		<IndexRedirect to="home"/>
-// 		<Route path="home" component={Home}/>
-// 		<Redirect from="*" to="home"/>
-// 	</Route>
-// </Router>
+let routes = <Router history={hashHistory}>
+	<Route path="/" component={App}>
+		 <IndexRedirect to="home"/>
+		 <Route path="home" component={Home}/>
+		 <Redirect from="*" to="home"/> 
+	</Route>
+</Router>
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(routes, document.getElementById('root'));
 registerServiceWorker();

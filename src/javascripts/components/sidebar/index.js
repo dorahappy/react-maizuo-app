@@ -14,7 +14,6 @@ class Sidebar extends Component {
 	}
     
     onOpenChange = (...args) => {
-        console.log(args);
         this.setState({ open: !this.state.open });
     }
     render() {

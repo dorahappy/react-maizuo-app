@@ -1,0 +1,89 @@
+
+
+.home-content{
+    padding-top: 18px;
+    li{
+         margin: 0 17px 17px 17px;
+        background-color: #f9f9f9;
+        box-shadow: 0.5px 0.5px 1px #a8a8a8;
+        cursor: pointer;
+        .content-item{
+            width: 100%;
+            .content-item-img{
+                img{
+                    width: 100%;
+                }
+            }
+            .content-item-title{
+                padding: 0 16px;
+                display: flex;
+                height: 50px;
+                justify-content: space-between;
+                align-items: center;
+                .title-left{
+                    display: flex;
+                    flex-direction: column;
+                    span{
+                        &:nth-child(1){
+                            font-size: 12px;
+                        }
+                        &:nth-child(2){
+                            color: #9a9a9a;
+                            font-size: 8px;
+                        }
+                    }
+                }
+                .title-right{
+                    color: #f78360;
+                    font-size: 18px;
+                }
+                .title-com-right{
+                    font-size: 10px;
+                }
+            }
+            .content-item-com-title{
+                padding: 0 16px;
+                display: flex;
+                height: 50px;
+                justify-content: space-between;
+                align-items: center;
+                height: 35px;
+                .title-com-right{
+                    font-size: 10px;
+                    color: #f78360;
+                }
+            }
+        }
+    }
+}
+
+.more-button{
+    width: 160px;
+    height: 30px;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    margin: 10px auto 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    color: #616161;
+    cursor: pointer;
+}
+.dividing-line{
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #a8a8a8;
+    .upcoming{
+        width: 65px;
+        height: 20px;
+        margin: 0 auto;
+        margin-bottom: -10px;
+        border-radius: 5px;
+        font-size: 10px;
+        line-height: 20px;
+        text-align: center;
+        color: #eee;
+        background-color: #a7a7a7;
+    }
+}
