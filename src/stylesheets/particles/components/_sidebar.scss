@@ -4,6 +4,7 @@
     width: 70%;
     .sidebar-nav{
         .am-list-body{
+            background: #282828;
             &::before{
                 background: #333;
             }
@@ -30,25 +31,21 @@
             }
         }
         .sidebar-nav-item{
-            background: #282828;
-            padding: 0;
-            .am-list-line{
-                &::after{
-                    background: #333 !important;
-                }
+                line-height: 50px;
+                display: block;
+                width: 100%;
                 padding: 0 16px;
-                border-bottom: 1px solid #333;
-                
-                .am-list-content{
-                    font-size: 14px;
-                    color: #9a9a9a;
-                    display: flex;
-                    justify-content: space-between;
+                border-bottom: 1px dotted #333;
+                font-size: 14px;
+                color: #9a9a9a;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                     i{
                         font-size: 14px;
+
                     }
-                }
-            }
+             
         }
     }
 }

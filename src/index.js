@@ -11,12 +11,18 @@ import registerServiceWorker from './registerServiceWorker';
 
 import {Router,Route,IndexRedirect,hashHistory, Redirect, IndexRoute} from 'react-router'
 import Home from './javascripts/components/Home'
+import Film from './javascripts/components/Film'
+import Movie from './javascripts/components/Movie'
+import Mine from './javascripts/components/Mine'
 
 
 
 let routes = <Router history={hashHistory}>
 	<Route path="/" component={App}>
 		 <IndexRoute component={Home}/>
+		 <Route path="/film" component={Film}/>
+		 <Route path="/movie" component={Movie}/>
+		 <Route path="/mine" component={Mine}/>
 	</Route>
 </Router>
 

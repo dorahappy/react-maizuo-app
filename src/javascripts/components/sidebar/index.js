@@ -2,6 +2,8 @@
 import React,{Component} from 'react'
 import { Drawer, List, NavBar, Icon } from 'antd-mobile'
 
+import { Link } from 'react-router'
+
 import Header from '../header'
 
 class Sidebar extends Component {
@@ -19,9 +21,10 @@ class Sidebar extends Component {
     render() {
         // fix in codepen
         const sidebar = (<List className="sidebar-nav">
-        {['首页', '影片', '影院', '商城', '我的'].map((i, index) => {
-            return (<List.Item className="sidebar-nav-item" key={index}
-            >{i}<i className="mui-icon mui-icon-arrowright"></i></List.Item>);
+        {[{title:'首页',path:'/'}, {title:'影片',path:'/film'}, {title:'影院',path:'/movie'}, {title:'我的',path:'/mine'}].map((i, index) => {
+            return (<Link onClick={this.onOpenChange} to={i.path} key={index} className="sidebar-nav-item"
+            >{i.title}<i className="mui-icon mui-icon-arrowright"></i>
+            </Link>);
         })}
         </List>);
 
@@ -29,7 +32,7 @@ class Sidebar extends Component {
         <Header onOpenChange = {this.onOpenChange}/>
         <Drawer
             className="my-drawer"
-            style={{ minHeight: document.documentElement.clientHeight,top:50, width: document.documentElement.clientWidth }}
+            style={{ minHeight: document.documentElement.clientHeight,top:50, width: document.documentElement.clientWidth,position: 'fixed', zIndex: 9999}}
             contentStyle={{ color: '#A6A6A6', textAlign: 'center', paddingTop: 50 }}
             sidebar={sidebar}
             open={this.state.open}
