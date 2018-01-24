@@ -9,6 +9,7 @@ class Banner extends Component {
 		super(props)
 		
 		this.state = {
+			imgHeight:'',
 			banners: []
 		}
 	}
@@ -30,9 +31,10 @@ class Banner extends Component {
 		return (
 			<div className="home-silder">
                 <Carousel
+					style={{zIndex:1}}
 					autoplay={true}
 					dots={false}
-					infinite
+					infinite={true}
 					selectedIndex={1}
 					>
 					{banners.map(val => (

@@ -2,29 +2,29 @@
 import React,{Component} from 'react'
 import axios from 'axios'
 
-import ContentNowItem from '../common/ContentNowItem'
+import ContentComingItem from '../../common/ContentComingItem'
 
-class ContentNow extends Component {
+class ContentComing extends Component {
     constructor(props){
 		super(props)
 		this.state = {
-            contentNow: [],
             contentComing: []
         }
 	}
     
     componentWillMount(){
 		let that = this
-		axios.get('mz/v4/api/film/now-playing', {
+		axios.get('mz/v4/api/film/coming-soon', {
             params: {
                 __t:new Date().getTime(),
                 page:1,
-                count:5
+                count:3
             }
+            
 		})
 		.then(function ({data}) {
 			that.setState({
-				contentNow: data.data.films
+				contentComing: data.data.films
 			})
         })
 	}
@@ -35,14 +35,13 @@ class ContentNow extends Component {
         return (
             <ul className="home-content">
                 {
-                    this.state.contentNow.map(item=>{
+                    this.state.contentComing.map(item=>{
                         return (
                             <li key={item.id}>
-                                <ContentNowItem item={item}/>
+                                <ContentComingItem item={item}/>
                             </li>
                         )
                     })
-                    
                 }
             
             </ul>
@@ -50,4 +49,4 @@ class ContentNow extends Component {
     }
 }
 
-export default ContentNow
+export default ContentComing

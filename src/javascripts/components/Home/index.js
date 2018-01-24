@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Banner from '../banner'
-import Content from '../content'
+import Banner from './banner'
+import Content from './content'
 
 
 //import logo from '../assets/logo.svg';

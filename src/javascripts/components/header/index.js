@@ -2,15 +2,17 @@
 import axios from 'axios'
 import React,{Component} from 'react'
 
+
 class Header extends Component {
 
+	
 	
 
 	render(){
 		return (
 			<div className="header">
 				<h1>
-					<div onClick={this.props.onOpenChange}>
+					<div onClick={this.props.changeShow}>
 						<i className='mui-icon mui-icon-bars'></i>
 					</div>
 					<p>卖座电影</p>
