@@ -1,7 +1,6 @@
 
 import React,{Component} from 'react'
 
-import { Link } from 'react-router'
 
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
@@ -17,7 +16,6 @@ class Common extends Component {
         }
 	}
     changeShow = () => {
-        console.log("111")
         this.setState({
             show: !this.state.show
         });
@@ -27,17 +25,14 @@ class Common extends Component {
    
     render() {
         let {show} = this.state
-        console.log(show)
         return (
             <div>   
                 <Header changeShow={this.changeShow}/>
                 <ReactCSSTransitionGroup
-                    transitionAppear={true}
                     transitionEnter={true}
                     transitionLeave={true}
                     transitionEnterTimeout={400}
                     transitionLeaveTimeout={400}
-                    transitionAppearTimeout={400}
                     transitionName="transition-sidebar"
                 >
                     {

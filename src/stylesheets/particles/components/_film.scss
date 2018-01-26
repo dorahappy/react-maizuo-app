@@ -1,0 +1,94 @@
+.app-film{
+    padding: 0 15px;
+    .film-list-nav{
+        height: 46px;
+        margin: 0 auto;
+        border-bottom: solid #fe6e00 1px;
+        .active{
+            color: #fe6e00 !important;
+            border-bottom: solid;
+        }
+        .now-playing,.coming-soon{
+            float: left;
+            width: 50%;
+            height: 100%;
+            text-align: center;
+            font-size: 16px;
+            line-height: 46px;
+            color: #6a6a6a;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.app-film-content{
+    padding: 0 15px;
+}
+.app-film-content-item{
+    padding: 20px 0;
+    border-bottom: 1px dashed #c9c9c9;
+    .film-img{
+        width: 60px;
+        float: left;
+        overflow: hidden;
+        img{
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .film-title{
+        padding-left: 15px;
+        display: inline-block;
+        width: 75%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: left;
+        h5{
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 32px;
+            color: #000;
+            div{
+                float: right;
+                width: 35px;
+                font-size: 16px;
+                line-height: 32px;
+                color: #fc7103;
+                position: relative;
+                i{
+                    color: #8e8e8e;
+                    position: absolute;
+                    right: 0;
+                    bottom: 1px;
+                }
+            }
+        }
+        div{
+            height: 24px;
+            line-height: 24px;
+            color: #8e8e8e;
+            font-size: 12px;
+            width: 100%;
+            display: inline-block;
+        }
+        p{
+            line-height: 24px;
+            color: #8e8e8e;
+            font-size: 12px;
+            span{
+                display: inline-block;
+                line-height: 24px;
+                color: #8aa2bf;
+                &.item-space{
+                    padding-right: 20px;
+                }
+            }
+            .film-date{
+                color: #ffb375;
+            }
+        }
+    }
+}
