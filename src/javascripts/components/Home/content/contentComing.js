@@ -1,7 +1,7 @@
 
 import React,{Component} from 'react'
 import axios from 'axios'
-
+import { Router, Route, hashHistory,Link } from 'react-router'
 import ContentComingItem from '../../common/ContentComingItem'
 
 class ContentComing extends Component {
@@ -37,9 +37,13 @@ class ContentComing extends Component {
                 {
                     this.state.contentComing.map(item=>{
                         return (
+                        	 
                             <li key={item.id}>
-                                <ContentComingItem item={item}/>
+                            	<Link to={`detail/${item.id}`}>
+                               		<ContentComingItem item={item}/>
+                               	</Link>
                             </li>
+	                        
                         )
                     })
                 }

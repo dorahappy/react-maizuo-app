@@ -14,12 +14,14 @@ import Home from './javascripts/components/Home'
 import Film from './javascripts/components/Film'
 import Movie from './javascripts/components/Movie'
 import Mine from './javascripts/components/Mine'
+import Detail from './javascripts/components/Detail'
 
 
 
 let routes = <Router history={hashHistory}>
 	<Route path="/" component={App}>
 		 <IndexRoute component={Home}/>
+		 <Route path="/detail/:id" component={Detail}/>
 		 <Route path="/film" component={Film}/>
 		 <Route path="/movie" component={Movie}/>
 		 <Route path="/mine" component={Mine}/>

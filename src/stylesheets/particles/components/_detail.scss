@@ -1,0 +1,61 @@
+.detailContent{
+    .detailImg{
+        width:100%;
+        height:210px;
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+    .detailTitle{
+        margin: 16px auto;
+        border-left: 16px solid RGB(228, 200, 156);
+        font-size: 16px;
+        padding-left: 4px;
+    }
+    .detailWord{
+        height: 18px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+    .actors{
+        height: 18px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        display: flex;
+        li{
+            height:14px;
+            text-align: center;
+            padding:0 10px;
+            border-right:1px solid #666;
+        }
+        li:last-child{
+            border-right:none;
+        }
+    }
+    .detailWord1{
+        text-overflow: ellipsis;
+        margin-bottom: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .buyTicket{
+        position:fixed;
+        bottom:20px;
+        left:110px;
+        text-align: center;
+        font-size: 14px;
+        width: 156px;
+        height: 36px;
+        line-height: 36px;
+        border: none;
+        background-color: #fe8233;
+        padding: 0;
+        margin: 0;
+        border-radius: 18px;
+        color: #fff;
+        -webkit-transition: 0.5s ease;
+    }
+}

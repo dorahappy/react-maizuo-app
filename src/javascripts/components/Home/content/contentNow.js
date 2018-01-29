@@ -1,6 +1,7 @@
 
 import React,{Component} from 'react'
 import axios from 'axios'
+import { Router, Route, hashHistory,Link } from 'react-router'
 
 import ContentNowItem from '../../common/ContentNowItem'
 
@@ -30,15 +31,16 @@ class ContentNow extends Component {
 	}
 
     render() {
-        
-
+	
         return (
             <ul className="home-content">
                 {
                     this.state.contentNow.map(item=>{
                         return (
                             <li key={item.id}>
-                                <ContentNowItem item={item}/>
+                            	<Link to={`detail/${item.id}`}>
+                                	<ContentNowItem item={item}/>
+                                </Link>
                             </li>
                         )
                     })
