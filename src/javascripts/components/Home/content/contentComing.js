@@ -31,7 +31,6 @@ class ContentComing extends Component {
 
     render() {
         
-
         return (
             <ul className="home-content">
                 {

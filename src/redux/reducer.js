@@ -1,6 +1,6 @@
 
 const defaultState={
-	cars:localStorage.carts?JSON.parse(localStorage.carts):[]
+	films: ''
 }
 
 const reducer = (state = defaultState,action)=>{

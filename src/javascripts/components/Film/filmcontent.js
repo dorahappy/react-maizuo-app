@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 
-import FilmContentItem from './filmcontentitem'
 import FilmContentInfo from './filmcontentinfo'
 
 
@@ -15,7 +13,7 @@ class FilmContent extends Component {
 		}
 	}
 
-	
+
 
 	render(){
 		let { filmcontent } = this.props
