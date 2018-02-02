@@ -21,7 +21,7 @@ class Sidebar extends Component {
                 <div className="sidebar-overlay" onClick={this.props.changeShow}>
                     <div className="app-sidebar">
                         <ul>
-                            {[{title:'首页',path:'/'}, {title:'影片',path:'/film'}, {title:'影院',path:'/movie'}, {title:'我的',path:'/mine'}].map((i, index) => {
+                            {[{title:'首页',path:'/'}, {title:'影片',path:'/film?now-playing'}, {title:'影院',path:'/movie'}, {title:'我的',path:'/mine'}].map((i, index) => {
                                 return <Link className="sidebar-nav" to={i.path} key={index} >
                                     <span>{i.title}</span>
                                     <i className="mui-icon mui-icon-arrowright"></i>

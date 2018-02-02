@@ -1,0 +1,59 @@
+
+.movie{
+    ul{
+        width:100%;
+        border-bottom:1px solid #fff;
+        .position{
+            
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            padding-left: 16px;
+            background: #e1e1e1;
+            margin-bottom: 1px;
+            color: #636363;
+            cursor: pointer
+        }dl{
+            dd{
+                border-bottom:1px solid #666;
+                padding:10px 0;
+                background:#fff;
+                overflow: hidden;
+                .movieLeft{
+                    float:left;
+                    padding-left:16px;
+                    p{
+                        overflow: hidden;
+                        font-size:14px;
+                        color:#333;
+                    }
+                    li{
+                        width:230px;
+                        padding-top:5px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        color:#999;
+                    }
+                    dl{
+                        color:#999;
+                    }
+                }
+               .movieRight{
+                  
+                   float:right;
+                   padding-right:10px;
+                   i{
+                       font-size:22px;
+                       color:#999;
+                   }
+               }
+            }
+            dd:last-child{
+                border-bottom:none;
+            }  
+        }
+        
+    }
+    
+}

@@ -9,7 +9,7 @@ import App from './javascripts/App';
 
 import registerServiceWorker from './registerServiceWorker';
 
-import {Router,Route,IndexRedirect,hashHistory, Redirect, IndexRoute} from 'react-router'
+import {Router, Route, IndexRedirect, browserHistory, hashHistory, Redirect, IndexRoute} from 'react-router'
 import Home from './javascripts/components/Home'
 import Film from './javascripts/components/Film'
 import Movie from './javascripts/components/Movie'

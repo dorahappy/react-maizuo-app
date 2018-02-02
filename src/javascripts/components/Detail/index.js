@@ -17,7 +17,6 @@ class Detail extends Component {
 	componentWillMount(){
 		const pathHash = this.props.location.pathname
 		const hash = this.props.params.id
-//		console.log(this.props.params.id)
 		let that = this
 		
 		axios.get('mz/v4/api/film'+'/'+hash, {
@@ -25,8 +24,6 @@ class Detail extends Component {
                 __t:new Date().getTime()
             }
 		}).then(function ({data}) {
-			
-			console.log(data)
 			that.setState({
 				detailMovie: data.data.film
 			})

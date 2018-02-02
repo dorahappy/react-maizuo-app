@@ -5,8 +5,10 @@ import React, { Component } from 'react'
 class Mine extends Component {
 	render(){
 		return (
-			<div>
-				mine
+			<div className="mine">
+				<div className="acountNumber">
+					<input type="text" placeholder="请输入手机号码/邮箱账号"/>
+				</div>
 			</div>
 		);
 	}

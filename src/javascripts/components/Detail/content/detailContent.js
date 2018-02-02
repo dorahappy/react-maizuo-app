@@ -19,7 +19,6 @@ class DetailContent extends Component {
         let item = this.props.item
 		let cover = item.cover
 		let actors = item.actors
-//		{console.log(actors)}
         return (
         	
         	<div className="detail">
