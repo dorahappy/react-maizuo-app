@@ -12,6 +12,7 @@ class FilmContentInfo extends Component {
 		}
 	}
 
+	
 
 	
 
@@ -34,4 +35,3 @@ class FilmContentInfo extends Component {
 }
 
 export default FilmContentInfo
-

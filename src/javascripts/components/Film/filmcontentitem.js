@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-import FilmHeader from './filmheader'
 
 
 class FilmContentItem extends Component {
@@ -29,6 +28,7 @@ class FilmContentItem extends Component {
 			case 5:h+='五';break;
 			case 6:h+='六';break;
 			case 7:h+='日';break;
+			default: break;
 		}
 		
 		return  h
@@ -36,7 +36,6 @@ class FilmContentItem extends Component {
 
 	render(){
 		let {film} = this.props
-		let {type} = this.state
 		return (
 			<div className="app-film-content-item">
 				<div className="film-img">

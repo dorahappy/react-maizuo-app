@@ -1,7 +1,17 @@
+.app-content{
+    >div{
+        >div{
+            background: #ebebeb;
+        }
+    }
+}
+
+
 
 
 .home-content{
     padding-top: 18px;
+    background: #ebebeb;
     li{
          margin: 0 17px 17px 17px;
         background-color: #f9f9f9;
@@ -69,6 +79,10 @@
     color: #616161;
     cursor: pointer;
 }
+.more-button:hover{
+    opacity: .8;
+}
+
 .dividing-line{
     position: relative;
     margin-top: 30px;
