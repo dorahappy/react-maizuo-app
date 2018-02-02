@@ -49,15 +49,23 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #999;
+        
         div{
             font-size: 14px;
             padding: 0 6px;
             display: flex;
+            color: #999;
             justify-content: space-between;
             align-items: center; 
+            span{
+                &:nth-child(2){
+                    display: inline-block;
+                    width: 3px;
+                }
+            }
             i{
                 font-size: 12px;
+                color: #999;
                 font-weight: 900;
             }
         }

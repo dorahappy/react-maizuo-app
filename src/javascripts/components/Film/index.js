@@ -57,7 +57,6 @@ class Film extends Component {
 			}
 		})
 		.then(function ({data}) {
-			console.log(data)
 			that.setState({
 				filmcontent:that.state.filmcontent.concat(data.data.films),
 				isloadingshow: true,
@@ -104,10 +103,9 @@ class Film extends Component {
 		this.setState({
 			st:e.path[0].scrollingElement.scrollTop
 		})
-		if(this.state.st>sh-ch-100){
+		if(this.state.st>sh-ch-200){
 			if(this.state.page<=this.state.total){
 				this.getData()
-				console.log(this.state.page)
 			}else{
 				return ;
 			}

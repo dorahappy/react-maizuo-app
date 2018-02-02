@@ -14,6 +14,7 @@ import Home from './javascripts/components/Home'
 import Film from './javascripts/components/Film'
 import Movie from './javascripts/components/Movie'
 import Mine from './javascripts/components/Mine'
+import City from './javascripts/components/city'
 
 
 
@@ -23,6 +24,7 @@ let routes = <Router history={hashHistory}>
 		 <Route path="/film" component={Film}/>
 		 <Route path="/movie" component={Movie}/>
 		 <Route path="/mine" component={Mine}/>
+		 <Route path="/city" component={City}/>
 	</Route>
 </Router>
 
