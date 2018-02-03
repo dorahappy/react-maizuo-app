@@ -30,10 +30,8 @@ class Movie extends Component {
 	}
 	   handleClick(event) {
         this.setState({show:!this.state.show});
-        event.stopPropagation()
-        event.preventDefault()
-        
-
+        event.stopPropagation();
+        event.preventDefault();
     }
 	componentWillMount(){
 		let that = this
@@ -49,7 +47,7 @@ class Movie extends Component {
 	}
 
 	render(){
-		var show= this.state.show?"block":"none";
+		var show= this.state.show?"none":"block";
         var style = {
             display:show,
         }
@@ -65,7 +63,7 @@ class Movie extends Component {
 								<dt key={item.id} className="position" onClick={this.handleClick}>{item.name}</dt>
 									{
 										movies.map(info=>(
-											item.pinyin == info.district.pinyin ?<dd className="movieDetail" style={style} key={info.id}>
+											item.pinyin == info.district.pinyin ?<dd className="movieDetail"  key={info.id} style={style}>
 												<div className="movieLeft">
 													<p>{info.name}</p>
 													<li>{info.address}</li>
@@ -75,8 +73,6 @@ class Movie extends Component {
 													<i className="fa fa-angle-right"></i>
 												</div>
 											</dd>:''
-	
-											
 										))
 									}
 							</dl>
