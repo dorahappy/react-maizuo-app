@@ -104,16 +104,23 @@ class Film extends Component {
 		this.setState({
 			st:e.path[0].scrollingElement.scrollTop
 		})
+
 		if(this.state.st>sh-ch-100){
 			if(this.state.page<=this.state.total){
 				this.getData()
 				console.log(this.state.page)
-			}else{
-				return ;
+
+				if(this.state.st>sh-ch-200){
+					if(this.state.page<=this.state.total){
+						this.getData()
+		
+					}else{
+						return ;
+					}
+				}
 			}
 		}
 	}
-
 	shouldComponentUpdate(){
 		if(!this.state.isloadingshow){
 			return true

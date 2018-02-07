@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 
+import {hashHistory} from 'react-router'
 
 //import logo from '../assets/logo.svg';
 class Mine extends Component {
+	constructor(props){
+		super(props);
+	}
+	componentDidMount(){
+		hashHistory.push('/mine/login')
+	}
 	render(){
 		return (
 			<div className="mine">
-				<div className="acountNumber">
-					<input type="text" placeholder="请输入手机号码/邮箱账号"/>
-				</div>
+				{this.props.children}
 			</div>
 		);
 	}

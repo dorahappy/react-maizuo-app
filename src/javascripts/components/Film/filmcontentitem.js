@@ -23,7 +23,7 @@ class FilmContentItem extends Component {
 		switch(day){
 			case 1:h+='一';break;
 			case 2:h+='二';break;
-			case 3:h+='三';break;
+			case 3:h+='三';break;  
 			case 4:h+='四';break;
 			case 5:h+='五';break;
 			case 6:h+='六';break;

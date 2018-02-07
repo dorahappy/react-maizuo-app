@@ -27,7 +27,7 @@ class Common extends Component {
         let {show} = this.state
         return (
             <div>   
-                <Header changeShow={this.changeShow}/>
+                <Header changeShow={this.changeShow} text={'卖座电影'}/>
                 <ReactCSSTransitionGroup
                     transitionEnter={true}
                     transitionLeave={true}

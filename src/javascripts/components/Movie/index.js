@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-
+import Header from '../header'
 
 class Movie extends Component {
 	constructor(props){
@@ -55,6 +55,7 @@ class Movie extends Component {
 		let movies = this.state.moviePosition
 		let that = this
 		return (
+			
 			<div className="movie">
 				<ul>		
 					{

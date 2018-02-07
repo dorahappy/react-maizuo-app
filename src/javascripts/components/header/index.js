@@ -1,5 +1,6 @@
 
 import React,{Component} from 'react'
+import { Link } from 'react-router'
 
 
 class Header extends Component {
@@ -8,6 +9,7 @@ class Header extends Component {
 	
 
 	render(){
+		
 		return (
 			<div className="header">
 				<h1>
@@ -17,17 +19,21 @@ class Header extends Component {
 					<p>卖座电影</p>
 				</h1>
 				<div className='header-right'>
-					<div>
-						<span>北京</span>
-						<span> </span>
-						<i className="mui-icon mui-icon-arrowdown"></i>
-					</div>
+					<Link to="/city">
+						<div>
+							<span>北京</span>
+							<span></span>
+							<i className="mui-icon mui-icon-arrowdown"></i>
+						</div>
+					</Link>
 					<p>
 						<i className='mui-icon mui-icon-person'></i>
 					</p>
 				</div>
 			</div>
 		)
+		
+	
 		
 	}
 	
