@@ -31,8 +31,8 @@ let routes = <Router history={hashHistory}>
 		 <Route path="/film" component={Film}/>
 		 <Route path="/movie" component={Movie}/>
 		 <Route path="/mine" component={Mine}>
-		 	<Route path="login" component={Login}/>
-		 	<Route path="register" component={Register}/>
+		 	<Route path="/mine/login" component={Login}/>
+		 	<Route path="/mine/register" component={Register}/>
 		 </Route>
 		 <Route path="/city" component={City}/>
 	</Route>
