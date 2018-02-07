@@ -1,6 +1,7 @@
 
 import React,{Component} from 'react'
 import { Link } from 'react-router'
+import { connect } from 'react-redux'
 
 
 class Header extends Component {
@@ -15,7 +16,7 @@ class Header extends Component {
 					<div onClick={this.props.changeShow}>
 						<i className='mui-icon mui-icon-bars'></i>
 					</div>
-					<p>卖座电影</p>
+					<p>{this.props.headerTitle}</p>
 				</h1>
 				<div className='header-right'>
 					<Link to="/city">
@@ -25,9 +26,11 @@ class Header extends Component {
 							<i className="mui-icon mui-icon-arrowdown"></i>
 						</div>
 					</Link>
-					<p>
-						<i className='mui-icon mui-icon-person'></i>
-					</p>
+					<Link to="/mine">
+						<p>
+							<i className='mui-icon mui-icon-person'></i>
+						</p>
+					</Link>
 				</div>
 			</div>
 		)
@@ -36,4 +39,4 @@ class Header extends Component {
 	
 }
 
-export default Header
+export default connect(state=>state)(Header)

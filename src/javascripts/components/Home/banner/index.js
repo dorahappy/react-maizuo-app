@@ -4,6 +4,8 @@ import React,{Component} from 'react'
 
 import { Carousel } from 'antd-mobile'
 
+import {Link} from 'react-router'
+
 class Banner extends Component {
 	constructor(props){
 		super(props)
@@ -28,6 +30,7 @@ class Banner extends Component {
 
 	render(){
 		let {banners} = this.state
+		
 		return (
 			<div className="home-silder">
                 <Carousel
@@ -38,6 +41,7 @@ class Banner extends Component {
 					selectedIndex={1}
 					>
 					{banners.map(val => (
+						
 						<img
 							src={val.imageUrl}
 							alt={val.name}
@@ -48,6 +52,7 @@ class Banner extends Component {
 							this.setState({ imgHeight: 'auto' });
 							}}
 						/>
+						
 					))}
 				</Carousel>
 			</div>

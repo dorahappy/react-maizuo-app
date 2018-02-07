@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Toast } from 'antd-mobile'
 import axios from 'axios'
+import {connect} from 'react-redux'
+import actions from '../../../redux/actions'
 
 import FilmHeader from './filmheader'
 import FilmContent from './filmcontent'
@@ -57,6 +59,7 @@ class Film extends Component {
 			}
 		})
 		.then(function ({data}) {
+			console.log(data)
 			that.setState({
 				filmcontent:that.state.filmcontent.concat(data.data.films),
 				isloadingshow: true,
@@ -86,6 +89,7 @@ class Film extends Component {
 	}
 
 	componentWillMount(){
+		this.props.changeHeaderTitle('卖座电影')
 		this.getData()
 	}
 
@@ -136,4 +140,10 @@ class Film extends Component {
 	}
 }
 
-export default Film
+let mapDispatchToProps = (dispatch)=>{
+	return {
+		changeHeaderTitle:actions.changeHeaderTitle
+	}
+}
+
+export default connect(state=>state,mapDispatchToProps)(Film)
